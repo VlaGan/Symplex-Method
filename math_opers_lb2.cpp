@@ -22,7 +22,7 @@ void print_array(float** mass, const int h, const int w, std::vector<float> xiv,
 	std::cout << ")" << std::endl;
 }
 
-void get_i_j(float**& mass, const int h, const int w, int* pi, int* pj) {
+void get_i_j(float** mass, const int h, const int w, int* pi, int* pj) {
 	int p1 = 0;
 	int p2 = 0;
 
@@ -56,7 +56,7 @@ void get_i_j(float**& mass, const int h, const int w, int* pi, int* pj) {
 	(*pj) = p2;
 }
 
-void symplex_method(float**& mas, const int hight, const int width, std::vector<std::string> xi,
+void symplex_method(float** mas, const int hight, const int width, std::vector<std::string> xi,
 	std::vector<float> xiv, int x_count) {
 	int p1 = 0;
 	int p2 = 0;
@@ -100,7 +100,7 @@ void symplex_method(float**& mas, const int hight, const int width, std::vector<
 	print_array(mas, hight, width, xiv, x_count);
 }
 
-void get_cond(float**& mas, const int hight, const int width, const std::string target, std::vector<std::string> xi, 
+void get_cond(float** mas, const int hight, const int width, const std::string target, std::vector<std::string> xi, 
 	std::vector<float> xiv, int x_count) {
 	bool not_minus_c = true;
 	if (target == "max"){
